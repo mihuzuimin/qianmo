@@ -1,44 +1,137 @@
-# Jekyll 默认忽略的文件
+# ========================================
+# Jekyll 和 GitHub Pages 相关
+# ========================================
+
+# 忽略 Jekyll 生成的静态网站文件
 _site/
+.docs/
+
+# 忽略 Sass 缓存
 .sass-cache/
+
+# 忽略 Jekyll 缓存
 .jekyll-cache/
+
+# 忽略 Jekyll 元数据文件
 .jekyll-metadata
+
+# 忽略 Bundler 管理的依赖包
 .bundle/
+
+# 忽略第三方库或插件
 vendor/
-.bak
+
+# 忽略备份文件
+*.bak
+
+# ========================================
+# 操作系统和编辑器生成的文件
+# ========================================
+
+# 忽略 macOS 系统文件
+.DS_Store
+
+# 忽略 Windows 系统文件
+[Tt]humbs.db
+ehthumbs.db
+Desktop.ini
+
+# 忽略 Linux 隐藏文件（如果需要）
+# *~
+
+# 忽略 Vim 临时文件
+*.swp
+*.swo
+*.swn
+*.un~
+*.un~
+
+# 忽略 VS Code 配置文件
+.vscode/
+
+# 忽略 Sublime Text 项目文件
+*.sublime-project
+*.sublime-workspace
+
+# 忽略 IntelliJ IDEA 项目文件
+.idea/
+
+# 忽略 Eclipse 配置文件
+.project
+.classpath
+.settings/
+*.launch
+
+# 忽略 NetBeans 项目文件
+/nbproject/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# 忽略其他编辑器文件
+*.sublime-snippet
+*.log
+
+# ========================================
+# 依赖包和构建输出
+# ========================================
+
+# 忽略 Node.js 依赖包
+node_modules/
+
+# 忽略 npm 调试日志
+npm-debug.log
+
+# 忽略前端构建输出
+dist/
+build/
+public/
+
+# 忽略 Ruby gem 缓存
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
+
+# ========================================
+# 数据库和日志文件
+# ========================================
+
+# 忽略 SQLite 数据库文件
+*.sqlite3
+*.db
 
 # 忽略日志文件
 *.log
+
+# ========================================
+# 环境变量和敏感信息
+# ========================================
+
+# 忽略环境变量文件
+.env
+.env.*
+!.env.example
+
+# ========================================
+# 其他不需要的文件
+# ========================================
 
 # 忽略临时文件
 *.tmp
 *.swp
 *~
-.DS_Store
-Thumbs.db
-# Windows 系统临时文件
-[Tt]humbs.db
-ehthumbs.db
-Desktop.ini
+# 忽略其他临时文件
+[Tt]emp/
+temp/
+tmp/
 
-# 忽略 Node.js 相关文件（如果使用）
-node_modules/
-npm-debug.log
-
-# 忽略前端构建文件（如果使用）
-dist/
-build/
-public/
-
-# 忽略环境变量文件（如果使用）
-.env
-.env.*
-!.env.example
-
-# 忽略数据库文件（如果使用）
-*.sqlite3
-*.db
-*.log
+# 忽略 Python 字节码文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
 # 忽略其他不需要的文件
 *.sublime-project
