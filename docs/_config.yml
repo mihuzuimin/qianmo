@@ -1,0 +1,17 @@
+# 主题配置
+theme: jekyll-theme-primer
+
+# 网站基本信息
+title: 浅陌游戏俱乐部
+description: >-
+  一个专注于游戏讨论和寻找游戏伙伴的俱乐部。在这里，你可以与来自五湖四海的游戏爱好者交流，分享你的游戏心得，寻找志同道合的伙伴，一起组队开黑，享受游戏的乐趣。
+baseurl: "" # 如果您的站点在子路径下，例如 /blog，设置为 /blog
+url: "https://qianmo.com/" # 替换为您的 GitHub Pages URL
+
+# 社交媒体（可选）
+QQ群: 941254076
+
+
+# 其他配置
+timezone: Asia/Shanghai
+lang: zh-CN
