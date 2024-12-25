@@ -1,0 +1,107 @@
+# -*- coding: utf-8 -*-
+"""
+浅陌游戏俱乐部网页生成脚本
+"""
+
+from string import Template
+
+def generate_html(club_name="浅陌游戏俱乐部", qq_group="941254076", description="一个专注于游戏讨论和寻找游戏伙伴的俱乐部。在这里，你可以与来自五湖四海的游戏爱好者交流，分享你的游戏心得，寻找志同道合的伙伴，一起组队开黑，享受游戏的乐趣。"):
+    html_template = Template("""
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>$club_name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .highlight {
+            color: #ff6600;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>$club_name</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>关于我们</h2>
+            <p>$description</p>
+        </div>
+        <div class="section">
+            <h2>讨论游戏</h2>
+            <p>在$club_name中，你可以讨论各种类型的游戏，包括但不限于：</p>
+            <ul>
+                <li>多人在线战术竞技游戏（如《英雄联盟》、《Dota 2》）</li>
+                <li>角色扮演游戏（如《魔兽世界》、《最终幻想》）</li>
+                <li>第一人称射击游戏（如《绝地求生》、《CS:GO》）</li>
+                <li>沙盒游戏（如《我的世界》、《泰拉瑞亚》）</li>
+                <li>其他任何你感兴趣的游戏</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>寻找游戏伙伴</h2>
+            <p>无论你是想组队开黑，还是寻找志同道合的朋友一起探讨游戏策略，$club_name都是你的不二之选。在这里，你可以：</p>
+            <ul>
+                <li>发布组队邀请</li>
+                <li>寻找特定游戏的伙伴</li>
+                <li>分享游戏心得和经验</li>
+                <li>参与线上或线下聚会</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>加入我们</h2>
+            <p>立即加入$club_name QQ群，QQ群号：<span class="highlight">$qq_group</span>，一起享受游戏的乐趣吧！</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 浅陌游戏俱乐部. 版权所有.
+    </footer>
+</body>
+</html>
+""")
+
+    return html_template.substitute(
+        club_name=club_name,
+        qq_group=qq_group,
+        description=description
+    )
+
+if __name__ == "__main__":
+    club_name = "浅陌游戏俱乐部"
+    qq_group = "941254076"
+    description = "一个专注于游戏讨论和寻找游戏伙伴的俱乐部。在这里，你可以与来自五湖四海的游戏爱好者交流，分享你的游戏心得，寻找志同道合的伙伴，一起组队开黑，享受游戏的乐趣。"
+
+    html_content = generate_html(club_name, qq_group, description)
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print("网页已生成：index.html")
