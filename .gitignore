@@ -1,0 +1,52 @@
+# Jekyll 默认忽略的文件
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+.bak
+
+# 忽略日志文件
+*.log
+
+# 忽略临时文件
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+# Windows 系统临时文件
+[Tt]humbs.db
+ehthumbs.db
+Desktop.ini
+
+# 忽略 Node.js 相关文件（如果使用）
+node_modules/
+npm-debug.log
+
+# 忽略前端构建文件（如果使用）
+dist/
+build/
+public/
+
+# 忽略环境变量文件（如果使用）
+.env
+.env.*
+!.env.example
+
+# 忽略数据库文件（如果使用）
+*.sqlite3
+*.db
+*.log
+
+# 忽略其他不需要的文件
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.vscode/
+*.project
+*.classpath
+*.settings/
+*.tmproj
+*.sublime-snippet
