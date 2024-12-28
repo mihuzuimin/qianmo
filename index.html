@@ -63,9 +63,50 @@
         .social-icon:hover {
             color: #ff6600;
         }
+        .navbar-custom {
+            background-color: #ff6600;
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #ffbb99;
+        }
+        .navbar-custom .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+        .navbar-custom .navbar-brand:hover {
+            color: #ffbb99;
+        }
     </style>
 </head>
 <body>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">浅陌游戏俱乐部</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">下载游戏资源</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#announcements">公告</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- 头部 -->
     <header>
@@ -85,7 +126,7 @@
                     <p>浅陌游戏俱乐部是一个充满活力和激情的社区，致力于为广大游戏爱好者提供一个交流和分享的平台。在这里，你可以与来自五湖四海的游戏爱好者交流，分享你的游戏心得，寻找志同道合的伙伴，一起组队开黑，享受游戏的乐趣。</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/about.jpg" class="img-fluid rounded" alt="关于我们">
+                    <img src="https://via.placeholder.com/500x300" class="img-fluid rounded" alt="关于我们">
                 </div>
             </div>
         </div>
@@ -98,7 +139,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="images/dota2.jpg" class="card-img-top" alt="Dota 2">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="多人在线战术竞技游戏">
                         <div class="card-body">
                             <h5 class="card-title">多人在线战术竞技游戏</h5>
                             <p class="card-text">如《英雄联盟》、《Dota 2》</p>
@@ -107,7 +148,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="images/wow.jpg" class="card-img-top" alt="魔兽世界">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="角色扮演游戏">
                         <div class="card-body">
                             <h5 class="card-title">角色扮演游戏</h5>
                             <p class="card-text">如《魔兽世界》、《最终幻想》</p>
@@ -116,12 +157,45 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="images/pubg.jpg" class="card-img-top" alt="绝地求生">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="第一人称射击游戏">
                         <div class="card-body">
                             <h5 class="card-title">第一人称射击游戏</h5>
                             <p class="card-text">如《绝地求生》、《CS:GO》</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载游戏资源 -->
+    <section class="section" id="download">
+        <div class="container">
+            <h2 class="mb-4">下载游戏资源</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>在这里，您可以下载各种游戏资源，包括游戏客户端、补丁、模组等。</p>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://www.example.com/download" class="btn btn-primary btn-lg" target="_blank">
+                        <i class="fas fa-download"></i> 点击下载
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公告 -->
+    <section class="section" id="announcements">
+        <div class="container">
+            <h2 class="mb-4">公告</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <li class="list-group-item">2024年12月28日：俱乐部成立一周年，感恩有你！</li>
+                        <li class="list-group-item">2024年12月20日：新增《绝地求生》游戏资源下载</li>
+                        <li class="list-group-item">2024年12月15日：欢迎新成员加入！</li>
+                    </ul>
                 </div>
             </div>
         </div>
