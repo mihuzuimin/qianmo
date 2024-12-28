@@ -10,31 +10,189 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- 自定义 CSS -->
     <style>
+        :root {
+            --primary-color: #ff6600;
+            --secondary-color: #333;
+            --background-color: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            --text-color: #333;
+            --footer-background: #333;
+            --footer-text: #fff;
+            --hover-color: #ff6600;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            color: #333;
+            background: var(--background-color);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
         }
+
         header {
-            background: #ff6600;
+            background: var(--primary-color);
             color: #fff;
             padding: 60px 0;
             text-align: center;
         }
+
         header h1 {
             font-size: 3rem;
             margin-bottom: 20px;
         }
+
         header p {
             font-size: 1.2rem;
         }
+
         .section {
             padding: 60px 0;
         }
+
         .section:nth-child(even) {
             background-color: #fff;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: var(--footer-background);
+            color: var(--footer-text);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: var(--footer-text);
+            transition: color 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--hover-color);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <h1>欢迎来到浅陌游戏俱乐部</h1>
+            <p>一个专注于游戏讨论和寻找游戏伙伴的社区</p>
+            <a href="#join" class="btn btn-light btn-lg mt-4">加入我们</a>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 关于我们 -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="mb-4">关于我们</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>浅陌游戏俱乐部是一个充满活力和激情的社区，致力于为广大游戏爱好者提供一个交流和分享的平台。在这里，你可以与来自五湖四海的游戏爱好者交流，分享你的游戏心得，寻找志同道合的伙伴，一起组队开黑，享受游戏的乐趣。</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://via.placeholder.com/500x300" class="img-fluid rounded" alt="关于我们" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 讨论游戏 -->
+        <section class="section" id="games">
+            <div class="container">
+                <h2 class="mb-4">讨论游戏</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="多人在线战术竞技游戏" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">多人在线战术竞技游戏</h5>
+                                <p class="card-text">如《英雄联盟》、《Dota 2》</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="角色扮演游戏" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">角色扮演游戏</h5>
+                                <p class="card-text">如《魔兽世界》、《最终幻想》</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="第一人称射击游戏" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">第一人称射击游戏</h5>
+                                <p class="card-text">如《绝地求生》、《CS:GO》</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 加入我们 -->
+        <section class="section" id="join">
+            <div class="container">
+                <h2 class="mb-4">加入我们</h2>
+                <p>扫描二维码加入浅陌游戏俱乐部 QQ 群：</p>
+                <img src="qrcode_1735143792416.jpg" alt="QQ 群二维码" class="img-fluid" style="max-width: 200px; margin-bottom: 20px;" loading="lazy">
+                <p>立即加入浅陌游戏俱乐部 QQ 群，QQ 群号：941254076，一起享受游戏的乐趣吧！</p>
+                <a href="https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=KyyeHzo8h8yffHlEpnM4AymOt7ydXbKX&authKey=sbV68ISSFvXAcMyv7cq828bZ%2B9b7FVWPQDKkyleOr9%2B2EJdxtc%2BHxjYy2Mv%2BemR0&noverify=0&group_code=941254076" class="btn btn-primary btn-lg" target="_blank">点击加入</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 浅陌游戏俱乐部</p>
+            <div class="social-icons">
+                <a href="https://b23.tv/ivjr19I" class="social-icon" target="_blank">
+                    <i class="fab fa-bilibili"></i> B站UP主
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS 和依赖 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义 JS -->
+    <script>
+        // 这里可以添加自定义的 JavaScript 代码
+    </script>
+</body>
+</html>            background-color: #fff;
         }
         .section:nth-child(odd) {
             background-color: #f9f9f9;
