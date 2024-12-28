@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>下载 - 浅陌游戏俱乐部</title>
+    <title>浅陌游戏俱乐部 - 下载</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome 图标库 -->
@@ -48,6 +48,18 @@
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
+        .search-container {
+            margin-bottom: 30px;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        .download-item {
+            margin-bottom: 20px;
+        }
         footer {
             background: #333;
             color: #fff;
@@ -69,70 +81,50 @@
 
     <!-- 头部 -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">浅陌游戏俱乐部</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">首页</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#games">公告</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="download.html">下载</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- 下载页面内容 -->
         <div class="container">
-            <h1 class="display-4">下载</h1>
-            <p class="lead">在这里下载最新的游戏客户端和补丁。</p>
+            <h1>浅陌游戏俱乐部 - 下载</h1>
+            <p>下载您需要的游戏资源</p>
         </div>
     </header>
 
-    <!-- 下载内容 -->
+    <!-- 搜索和下载内容 -->
     <section class="section" id="downloads">
         <div class="container">
-            <h2 class="mb-4">游戏下载</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="form-control" placeholder="搜索下载内容...">
+            </div>
+            <div class="row" id="downloadsRow">
+                <div class="col-md-4 download-item">
                     <div class="card mb-4">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Dota 2 下载">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Dota 2">
                         <div class="card-body">
                             <h5 class="card-title">Dota 2</h5>
-                            <p class="card-text">下载最新版本的 Dota 2 客户端。</p>
+                            <p class="card-text">多人在线战术竞技游戏</p>
                             <a href="#" class="btn btn-primary">下载</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 download-item">
                     <div class="card mb-4">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="魔兽世界 下载">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="魔兽世界">
                         <div class="card-body">
                             <h5 class="card-title">魔兽世界</h5>
-                            <p class="card-text">下载最新版本的魔兽世界客户端。</p>
+                            <p class="card-text">角色扮演游戏</p>
                             <a href="#" class="btn btn-primary">下载</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 download-item">
                     <div class="card mb-4">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="绝地求生 下载">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="绝地求生">
                         <div class="card-body">
                             <h5 class="card-title">绝地求生</h5>
-                            <p class="card-text">下载最新版本的绝地求生客户端。</p>
+                            <p class="card-text">第一人称射击游戏</p>
                             <a href="#" class="btn btn-primary">下载</a>
                         </div>
                     </div>
                 </div>
+                <!-- 可以添加更多下载项 -->
             </div>
         </div>
     </section>
@@ -153,7 +145,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 自定义 JS -->
     <script>
-        // 这里可以添加自定义的 JavaScript 代码
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById('searchInput');
+            const downloadsRow = document.getElementById('downloadsRow');
+
+            searchInput.addEventListener('input', function() {
+                const filter = searchInput.value.toLowerCase();
+                const items = downloadsRow.getElementsByClassName('download-item');
+
+                for (let item of items) {
+                    const title = item.getElementsByClassName('card-title')[0].textContent.toLowerCase();
+                    const text = item.getElementsByClassName('card-text')[0].textContent.toLowerCase();
+                    if (title.includes(filter) || text.includes(filter)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
