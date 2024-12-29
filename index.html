@@ -80,9 +80,21 @@
         .navbar-custom .navbar-brand:hover {
             color: #ffbb99;
         }
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: none;
+            z-index: 100;
+        }
     </style>
 </head>
 <body>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="btn btn-primary" onclick="topFunction()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -168,8 +180,8 @@
                     <p>在这里，您可以下载各种游戏资源，包括游戏客户端、补丁、模组等。</p>
                 </div>
                 <div class="col-md-6">
-                    <a href="download.html" class="btn btn-primary btn-lg" target="_blank">
-                        <i class="fas fa-download"></i> 点击下载
+                </div>    
+                <a href="download.html" class="btn btn-primary">点击跳转至下载页面</a>
                     </a>
                 </div>
             </div>
@@ -177,15 +189,16 @@
     </section>
 
     <!-- 公告 -->
-     <!-- 注意此公告建议放三个如果过多请删除否则往下翻太烦了 -->
     <section class="section" id="announcements">
         <div class="container">
             <h2 class="mb-4">公告</h2>
             <div class="row">
                 <div class="col-md-12">
                     <ul class="list-group">
+                        <li class="list-group-item">2024年12月29日11：11主页和下载页面加入返回顶部按钮，公告页面紧锣密鼓制作中后期主页和下载页面加入时间显示敬请期待，目前主页导航栏无法同步到同一行也很无奈，目前版本适配N多种规格屏幕达到自适应。</li>
+                        <li class="list-group-item">2024年12月29日00：06加班加点制作赶工中。</li>
                         <li class="list-group-item">2024年12月28日19：36网页接近尾声。</li>
-                         <li class="list-group-item">2024年12月29日0:06网页网页制作加班加点制作中。</li>
+                        
                     </ul>
                 </div>
             </div>
@@ -199,7 +212,7 @@
             <p>扫描二维码加入浅陌游戏俱乐部 QQ 群：</p>
             <img src="qrcode_1735143792416.jpg" alt="QQ 群二维码" class="img-fluid" style="max-width: 200px; margin-bottom: 20px;">
             <p>立即加入浅陌游戏俱乐部 QQ 群，QQ 群号：941254076，一起享受游戏的乐趣吧！</p>
-            <a href="https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=KyyeHzo8h8yffHlEpnM4AymOt7ydXbKX&authKey=sbV68ISSFvXAcMyv7cq828bZ%2B9b7FVWPQDKkyleOr9%2B2EJdxtc%2BHxjYy2Mv%2BemR0&noverify=0&group_code=941254076" class="btn btn-primary btn-lg" target="_blank">点击加入</a>
+            <a href="" class="btn btn-primary btn-lg" target="_blank">点击加入</a>
         </div>
     </section>
 
@@ -208,7 +221,7 @@
         <div class="container text-center">
             <p>&copy; 2024 浅陌游戏俱乐部</p>
             <div class="social-icons">
-                <a href="https://b23.tv/ivjr19I" class="social-icon" target="_blank">
+                <a href="" class="social-icon" target="_blank">
                     <i class="fab fa-bilibili"></i> B站UP主
                 </a>
             </div>
@@ -219,7 +232,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 自定义 JS -->
     <script>
-        // 这里可以添加自定义的 JavaScript 代码
+        // 返回顶部按钮功能
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // 显示返回顶部按钮
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
