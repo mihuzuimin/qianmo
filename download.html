@@ -75,9 +75,21 @@
         .social-icon:hover {
             color: #ff6600;
         }
+        #back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: none;
+            z-index: 100;
+        }
     </style>
 </head>
 <body>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="btn btn-primary" onclick="topFunction()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- 头部 -->
     <header>
@@ -171,7 +183,7 @@
 
                 for (let item of items) {
                     const title = item.getElementsByClassName('card-title')[0].textContent.toLowerCase();
-                    const text = item.getElementsByClassName('card-text')[0].textContent.toLowerCase();
+                    const text = item.getElementsByClass="card-text" [0].textContent.toLowerCase();
                     if (title.includes(filter) || text.includes(filter)) {
                         item.style.display = '';
                     } else {
@@ -180,6 +192,21 @@
                 }
             });
         });
+
+        // 返回顶部按钮功能
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // 显示返回顶部按钮
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
