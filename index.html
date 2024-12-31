@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>浅陌游戏俱乐部</title>
+    <title>浅陌游戏俱乐部新年特别版本</title>
     <style>
         /* 全局样式 */
         body {
@@ -11,13 +11,13 @@
             margin: 0;
             padding: 0;
             color: #ffffff;
-            background: linear-gradient(120deg, #89CFF0, #1a1a75);
+            background: linear-gradient(120deg, #ff5c5c, #d40000, #ff8c42);
             background-size: 400% 400%;
-            animation: gradientAnimation 10s ease infinite;
+            animation: gradientAnimation 8s ease infinite;
             overflow-x: hidden;
         }
 
-        /* 背景颜色渐变动画 */
+        /* 背景颜色动态渐变动画 */
         @keyframes gradientAnimation {
             0% {
                 background-position: 0% 50%;
@@ -41,7 +41,7 @@
             align-items: center;
             padding: 10px 20px;
             background-color: #ffffff;
-            border-bottom: 2px solid #00aaff;
+            border-bottom: 2px solid #d40000;
             position: fixed; /* 固定导航栏在屏幕顶部 */
             top: 0;
             left: 0;
@@ -53,13 +53,13 @@
         .navbar .logo {
             font-size: 20px;
             font-weight: bold;
-            color: #00aaff;
+            color: #d40000;
             text-decoration: none;
         }
 
         .navbar a {
             text-decoration: none;
-            color: #00aaff;
+            color: #d40000;
             font-size: 18px;
             margin-left: 20px;
             padding: 8px 12px;
@@ -68,14 +68,14 @@
         }
 
         .navbar a:hover {
-            background-color: #00aaff;
+            background-color: #d40000;
             color: #ffffff;
         }
 
         /* 标题区域样式 */
         .header {
             text-align: center;
-            padding: 80px 20px; /* 增加顶部内边距，避免导航栏遮挡 */
+            padding: 80px 20px;
             background-color: transparent;
             animation: fadeIn 2s ease-out;
         }
@@ -87,13 +87,13 @@
 
         .header h1 {
             font-size: 48px;
-            color: #00aaff;
+            color: #ff8c42;
             margin-bottom: 10px;
         }
 
         .header p {
             font-size: 20px;
-            color: #cccccc;
+            color: #ffcccc;
         }
 
         .header .join-button {
@@ -102,16 +102,16 @@
             padding: 12px 24px;
             font-size: 18px;
             color: #ffffff;
-            background-color: #00aaff;
+            background-color: #d40000;
             text-decoration: none;
             border-radius: 30px;
-            box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+            box-shadow: 0 0 15px rgba(255, 92, 92, 0.7);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .header .join-button:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(0, 170, 255, 1);
+            box-shadow: 0 0 20px rgba(255, 92, 92, 1);
         }
 
         /* 公告部分 */
@@ -123,7 +123,7 @@
 
         .announcement h2 {
             font-size: 32px;
-            color: #00aaff;
+            color: #ff8c42;
             margin-bottom: 20px;
         }
 
@@ -136,7 +136,7 @@
         }
 
         .announcement .list-group-item {
-            background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+            background-color: rgba(255, 92, 92, 0.8); /* 半透明背景 */
             margin-bottom: 10px;
             padding: 10px 15px;
             border-radius: 8px;
@@ -153,7 +153,7 @@
 
         .download-section h2 {
             font-size: 32px;
-            color: #00aaff;
+            color: #ff8c42;
             margin-bottom: 20px;
         }
 
@@ -162,16 +162,16 @@
             padding: 12px 24px;
             font-size: 18px;
             color: #ffffff;
-            background-color: #00aaff;
+            background-color: #d40000;
             text-decoration: none;
             border-radius: 30px;
-            box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+            box-shadow: 0 0 15px rgba(255, 92, 92, 0.7);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .download-section a:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(0, 170, 255, 1);
+            box-shadow: 0 0 20px rgba(255, 92, 92, 1);
         }
 
         /* 加入我们部分 */
@@ -183,7 +183,7 @@
 
         .join-us h2 {
             font-size: 32px;
-            color: #00aaff;
+            color: #ff8c42;
             margin-bottom: 20px;
         }
 
@@ -195,7 +195,7 @@
 
         .join-us p {
             font-size: 18px;
-            color: #cccccc;
+            color: #ffcccc;
             margin-bottom: 20px;
         }
 
@@ -204,23 +204,23 @@
             padding: 12px 24px;
             font-size: 18px;
             color: #ffffff;
-            background-color: #00aaff;
+            background-color: #d40000;
             text-decoration: none;
             border-radius: 30px;
-            box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+            box-shadow: 0 0 15px rgba(255, 92, 92, 0.7);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .join-us .join-button:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(0, 170, 255, 1);
+            box-shadow: 0 0 20px rgba(255, 92, 92, 1);
         }
 
         /* 页脚样式 */
         footer {
             text-align: center;
             padding: 20px 10px;
-            background-color: rgba(0, 0, 0, 0.7); /* 半黑色，接近透明 */
+            background-color: rgba(0, 0, 0, 0.7);
             color: #cccccc;
             margin-top: 20px;
         }
@@ -233,7 +233,7 @@
         footer .social-icons a {
             margin: 0 10px;
             text-decoration: none;
-            color: #00aaff;
+            color: #d40000;
             font-size: 18px;
             transition: color 0.3s;
         }
@@ -251,7 +251,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #00aaff;
+            background-color: #d40000;
             color: #ffffff;
             font-size: 16px;
             border: none;
@@ -271,9 +271,9 @@
 <body>
     <!-- 导航栏 -->
     <div class="navbar">
-        <a href="#" class="logo">浅陌游戏俱乐部</a>
+        <a href="#" class="logo">浅陌游戏俱乐部新年特别版本</a>
         <div class="nav-links">
-            <a href>2.10.0.0UNPCNXM</a>
+            <a href>2.10.2.0UNPCNXM新年特别版本</a>
             <a href="#home">首页</a>
             <a href="#download">下载</a>
             <a href="#announcement">公告</a>
@@ -283,7 +283,7 @@
     <!-- 标题部分 -->
     <section class="header" id="home">
         <h1>欢迎来到浅陌游戏俱乐部</h1>
-        <p>一个专注于游戏讨论和寻找游戏伙伴的社区</p>
+        <p>新年快乐，红红火火，欢迎加入！</p>
         <a href="#join-us" class="join-button">加入我们</a>
     </section>
 
@@ -291,11 +291,10 @@
     <section class="announcement" id="announcement">
         <h2>最新公告</h2>
         <ul>
-            <li class="list-group-item">2024年12月29日21：41花了一天时间,完成了整体网站重构主页下载页焕然一新，主页更科幻下载页面更简洁修复搜索框功能，主体焕然一新带来史无前例体验，我编辑的时候发现下载页面排版有问题，我当时没发现后来发布到GitHub后发现排版错误了后期重新适配，对您的不适感到抱歉，深感歉意。</li>
-            <li class="list-group-item">2024年12月29日11：40修复主页导航栏不在同一行的问题发现有个代码敲错了😅。</li>
-            <li class="list-group-item">2024年12月29日11：11主页和下载页面加入返回顶部按钮，公告页面紧锣密鼓制作中后期主页和下载页面加入时间显示敬请期待，目前主页导航栏无法同步到同一行也很无奈，目前版本适配N多种规格屏幕达到自适应。</li>
-            <li class="list-group-item">2024年12月29日00：06加班加点制作赶工中。</li>
-            <li class="list-group-item">2024年12月28日19：36网页接近尾声。</li>
+            <li class="list-group-item">2024年12月29日21:41 花了一天时间完成整体重构！</li>
+            <li class="list-group-item">2024年12月29日11:40 修复主页导航栏不在同一行的问题。</li>
+            <li class="list-group-item">2024年12月29日00:06 加班加点制作赶工中。</li>
+            <li class="list-group-item">2024年12月28日19:36 网页接近尾声。</li>
         </ul>
     </section>
 
