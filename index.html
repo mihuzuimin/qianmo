@@ -3,257 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>浅陌游戏俱乐部新年特别版本</title>
+    <title>浅陌游戏俱乐部 - 新年特别版</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* 全局样式 */
+        /* 自定义样式 */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #ffffff;
-            background: linear-gradient(120deg, #ff5c5c, #d40000, #ff8c42);
-            background-size: 400% 400%;
-            animation: gradientAnimation 8s ease infinite;
-            overflow-x: hidden;
+            color: #fff;
+            background: linear-gradient(135deg, #d40000, #ff8c42);
+            line-height: 1.6;
         }
 
-        /* 背景颜色动态渐变动画 */
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        /* 顶部导航栏 */
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #ffffff;
-            border-bottom: 2px solid #d40000;
-            position: fixed; /* 固定导航栏在屏幕顶部 */
-            top: 0;
-            left: 0;
-            width: 100%;/*  */
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
-        .navbar .logo {
-            font-size: 20px;
+        .navbar-brand {
+            font-size: 24px;
             font-weight: bold;
-            color: #d40000;
-            text-decoration: none;
+            color: #d40000 !important;
         }
 
-        .navbar a {
-            text-decoration: none;
-            color: #d40000;
-            font-size: 18px;
-            margin-left: 20px;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+        .nav-link {
+            color: #333 !important;
         }
 
-        .navbar a:hover {
+        .nav-link:hover {
             background-color: #d40000;
-            color: #ffffff;
+            color: #fff !important;
         }
 
-        /* 标题区域样式 */
         .header {
+            padding: 120px 0 60px;
             text-align: center;
-            padding: 80px 20px;
-            background-color: transparent;
-            animation: fadeIn 2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .header h1 {
             font-size: 48px;
-            color: #ff8c42;
-            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .header p {
-            font-size: 20px;
-            color: #ffcccc;
+            font-size: 18px;
+            color: #ffeb3b;
         }
 
-        .header .join-button {
-            display: inline-block;
-            margin-top: 20px;
+        .btn-primary {
+            background-color: #d40000;
+            border: none;
             padding: 12px 24px;
             font-size: 18px;
-            color: #ffffff;
-            background-color: #d40000;
-            text-decoration: none;
             border-radius: 30px;
-            box-shadow: 0 0 15px rgba(255, 92, 92, 0.7);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .header .join-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 92, 92, 1);
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(212, 0, 0, 0.4);
         }
 
-        /* 公告部分 */
-        .announcement {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: transparent;
+        .section {
+            padding: 40px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
         }
 
-        .announcement h2 {
+        .section h2 {
             font-size: 32px;
-            color: #ff8c42;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .announcement ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 auto;
-            max-width: 600px;
-            text-align: left;
-        }
-
-        .announcement .list-group-item {
-            background-color: rgba(255, 92, 92, 0.8); /* 半透明背景 */
+        .list-group-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: none;
             margin-bottom: 10px;
-            padding: 10px 15px;
-            border-radius: 8px;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* 下载部分 */
-        .download-section {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: transparent;
-        }
-
-        .download-section h2 {
-            font-size: 32px;
-            color: #ff8c42;
-            margin-bottom: 20px;
-        }
-
-        .download-section a {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 18px;
-            color: #ffffff;
-            background-color: #d40000;
-            text-decoration: none;
-            border-radius: 30px;
-            box-shadow: 0 0 15px rgba(255, 92, 92, 0.7);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .download-section a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 92, 92, 1);
+        .list-group-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* 加入我们部分 */
-        .join-us {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: transparent;
-        }
-
-        .join-us h2 {
-            font-size: 32px;
-            color: #ff8c42;
-            margin-bottom: 20px;
-        }
-
-        .join-us img {
-            width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .join-us p {
-            font-size: 18px;
-            color: #ffcccc;
-            margin-bottom: 20px;
-        }
-
-        .join-us .join-button {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 18px;
-            color: #ffffff;
-            background-color: #d40000;
-            text-decoration: none;
-            border-radius: 30px;
-            box-shadow: 0 0 15px rgba(255, 92, 92, 0.7);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .join-us .join-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 92, 92, 1);
-        }
-
-        /* 页脚样式 */
         footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ccc;
+            padding: 20px 0;
             text-align: center;
-            padding: 20px 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #cccccc;
-            margin-top: 20px;
         }
 
-        footer .container p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-
-        footer .social-icons a {
-            margin: 0 10px;
+        .social-icons a {
+            color: #ffeb3b;
             text-decoration: none;
-            color: #d40000;
+            margin: 0 10px;
             font-size: 18px;
             transition: color 0.3s;
         }
 
-        footer .social-icons a:hover {
-            color: #ffffff;
+        .social-icons a:hover {
+            color: #fff;
         }
 
-        footer .social-icons i {
-            margin-right: 5px;
-        }
-
-        /* 返回顶部按钮 */
         .back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
             background-color: #d40000;
-            color: #ffffff;
-            font-size: 16px;
+            color: #fff;
             border: none;
             border-radius: 50%;
             padding: 10px 15px;
@@ -263,70 +123,83 @@
         }
 
         .back-to-top:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <!-- 导航栏 -->
-    <div class="navbar">
-        <a href="#" class="logo">浅陌游戏俱乐部新年特别版本</a>
-        <div class="nav-links">
-            <a href>2.10.2.13UNPCNXM新年特别版本</a>
-            <a href="https://f.wps.cn/g/yIngAufa/">点击反馈或提交建议</a>
-            <a href="#home">首页</a>
-            <a href="#download">下载</a>
-            <a href="#announcement">公告</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">浅陌游戏俱乐部</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#announcement">公告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">下载</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#join-us">加入我们</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 
     <!-- 标题部分 -->
     <section class="header" id="home">
-        <h1>欢迎来到浅陌游戏俱乐部</h1>
-        <p>新年快乐，红红火火，欢迎加入！</p>
-        <a href="#join-us" class="join-button">加入我们</a>
+        <div class="container">
+            <h1>欢迎来到浅陌游戏俱乐部</h1>
+            <p>新年快乐，红红火火，欢迎加入！</p>
+            <a href="#join-us" class="btn btn-primary">立即加入</a>
+        </div>
     </section>
 
     <!-- 公告部分 -->
-    <section class="announcement" id="announcement">
-        <h2>最新公告</h2>
-        <ul>
-            <li class="list-group-item">2025年1月5日16:19此次更新下载资源页面新增17款游戏供大家选择下载，由于游戏名称太长这里就不写了</li>
-            <li class="list-group-item">2025年1月2日21:10此次更新了游戏资源下载页面游戏资源上线了有《使命召唤15：黑色行动3+全DLC》、《使命召唤17：黑色行动冷战》、《全面坦克模拟器》、《烟花模拟器Fireworks Mania - An Explosive Simulator》、《方舟生存：进化v-356_1+全dlc》、《荒野大镖客2：救赎-2019-1_0_1436_28》、《森林之子v.43470 2023-pc》目前在资源下载页面一共上线了有16款游戏当中有可能包括新版本和老版本供大家选择下载</li>
-            <li class="list-group-item">2025年1月1日20:16此次版本更新了下载页面和主页的反馈与建议按钮点击按钮跳转至金山表单填写无需登录也可以填写此表单匿名我看不到真实个人隐私</li>
-            <li class="list-group-item">2024年12月31日23：14此次更新了资源gtaiv（4）</li>
-            <li class="list-group-item">2024年12月31日21:21 此次新年限定版本时间为2025年1月1日至2025年2月18日，此次新增游戏资源下载：使命召唤1-14种子合集、刺客信条4：黑旗— v1.01中英文单机黑匣版、
-            恶灵附身— v1.1中英文完整硬盘版，此次版本修复上次版本下载资源页面排版问题此问题以修复后期即将新增反馈与建议按钮</li>
-            <li class="list-group-item">2024年12月29日21:41 花了一天时间完成整体重构！</li>
-            <li class="list-group-item">2024年12月29日11:40 修复主页导航栏不在同一行的问题。</li>
-            <li class="list-group-item">2024年12月29日00:06 加班加点制作赶工中。</li>
-            <li class="list-group-item">2024年12月28日19:36 网页接近尾声。</li>
-        </ul>
+    <section class="section" id="announcement">
+        <div class="container">
+            <h2>最新公告</h2>
+            <ul class="list-group">
+                <li class="list-group-item">2025年1月17日 - 新增《双人成行》、《超市模拟器》、《都市天际线2》</li>
+                <li class="list-group-item">2025年1月5日 - 新增17款游戏资源，欢迎下载体验！</li>
+                <li class="list-group-item">2025年1月1日 - 更新反馈与建议功能，匿名提交更方便！</li>
+            </ul>
+        </div>
     </section>
 
     <!-- 下载部分 -->
-    <section class="download-section" id="download">
-        <h2>下载页面</h2>
-        <a href="download.html" target="_self">进入下载页面</a>
+    <section class="section" id="download">
+        <div class="container text-center">
+            <h2>下载页面</h2>
+            <a href="download.html" class="btn btn-primary">进入下载页面</a>
+        </div>
     </section>
 
     <!-- 加入我们部分 -->
-    <section class="join-us" id="join-us">
-        <h2>加入我们</h2>
-        <img src="qrcode_1735143792416.jpg" alt="加入我们二维码">
-        <p>扫描二维码加入浅陌游戏俱乐部 QQ 群：941254076</p>
-        <a href="https://qm.qq.com/q/z4dxDVacNi" class="join-button" target="_blank">点击加入</a>
+    <section class="section" id="join-us">
+        <div class="container text-center">
+            <h2>加入我们</h2>
+            <img src="qrcode_1735143792416.jpg" alt="加入我们二维码" class="img-fluid mb-3">
+            <p>扫描二维码加入浅陌游戏俱乐部 QQ 群：941254076</p>
+            <a href="https://qm.qq.com/q/z4dxDVacNi" class="btn btn-primary" target="_blank">点击加入</a>
+        </div>
     </section>
 
     <!-- 页脚 -->
     <footer>
-        <div class="container text-center">
-            <p>&copy; 2024-2025 版权归浅陌游戏俱乐部所有</p>
+        <div class="container">
+            <p>&copy; 2024-2025 浅陌游戏俱乐部</p>
             <div class="social-icons">
-                <a href="https://space.bilibili.com/1322038478" class="social-icon" target="_blank">
-                    <i class="fab fa-bilibili"></i> B站UP主
-                </a>
+                <a href="https://space.bilibili.com/1322038478" target="_blank">B站UP主</a>
             </div>
         </div>
     </footer>
@@ -334,6 +207,8 @@
     <!-- 返回顶部按钮 -->
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // 返回顶部功能
         function scrollToTop() {
