@@ -3,32 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>浅陌游戏俱乐部新年特别版本</title>
+    <title>浅陌游戏俱乐部</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
     <style>
         /* 全局样式 */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #ffffff;
-            background: linear-gradient(120deg, #ff5c5c, #d40000, #ff8c42);
-            background-size: 400% 400%;
-            animation: gradientAnimation 8s ease infinite;
+            /* 移除原有背景样式，使用外部custom.css的统一背景 */
             overflow-x: hidden;
         }
 
-        /* 背景颜色动态渐变动画 */
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+        /* 已移除冗余动画样式，依赖外部custom.css统一样式 */
 
         html, body {
             height: 100%;
@@ -309,9 +297,9 @@
 <body>
     <!-- 导航栏 -->
     <div class="navbar">
-        <a href="#" class="logo">浅陌游戏俱乐部新年特别版本</a>
+        <a href="#" class="logo">浅陌游戏俱乐部</a>
         <div class="nav-links">
-            <a href>2.10.3.20UNPCNXM新年特别版本</a>
+            <a href>2.203.0</a>
             <a href="https://f.wps.cn/g/yIngAufa/">点击反馈或提交建议</a>
             <a href="#home">首页</a>
             <a href="#download">下载</a>
@@ -323,7 +311,7 @@
     <!-- 标题部分 -->
     <section class="header" id="home">
         <h1>欢迎来到浅陌游戏俱乐部</h1>
-        <p>新年快乐，红红火火，欢迎加入！</p>
+        <p>永远相信美好的事情即将发生</p>
         <a href="#join-us" class="join-button">加入我们</a>
     </section>
 
@@ -331,6 +319,7 @@
     <section class="announcement" id="announcement">
         <h2>最新公告</h2>
         <ul>
+            <li class="list-group-item">2025年6月11日21点41分此次正式恢复更新后续将去除之前的过年属性，将在不久会去除，时间有可能很长必须经过多次调整测试，我相信不久将来网站会越做越大，越来越好，引用一句雷总一句话：“永远相信美好的事情即将发生。”</li>
             <li class="list-group-item">2025年1月17日16:06:00 此次新增《双人成行》、《超市模拟器》、《都市天际线2》</li>
             <li class="list-group-item">2025年1月5日16:19:00 此次更新下载资源页面新增17款游戏供大家选择下载，由于游戏名称太长这里就不写了</li>
             <li class="list-group-item">2025年1月2日21:10:00 此次更新了游戏资源下载页面游戏资源上线了有《使命召唤15：黑色行动3+全DLC》、《使命召唤17：黑色行动冷战》、《全面坦克模拟器》、《烟花模拟器Fireworks Mania - An Explosive Simulator》、《方舟生存：进化v-356_1+全dlc》、《荒野大镖客2：救赎-2019-1_0_1436_28》、《森林之子v.43470 2023-pc》目前在资源下载页面一共上线了有16款游戏当中有可能包括新版本和老版本供大家选择下载</li>
@@ -361,7 +350,7 @@
     <!-- 页脚 -->
     <footer>
         <div class="container text-center">
-            <p>&copy; 2024-2025 版权归浅陌游戏俱乐部所有</p>
+            <p>&copy; 2024-2025 版权归浅陌游戏俱乐部浅陌所有</p>
             <div class="social-icons">
                 <a href="https://space.bilibili.com/1322038478" class="social-icon" target="_blank">
                     <i class="fab fa-bilibili"></i> B站UP主

@@ -1,6 +1,7 @@
 ---
 title: 浅陌游戏俱乐部
 ---
+<link href="../css/custom.css" rel="stylesheet">
 
 # 欢迎来到浅陌游戏俱乐部
 

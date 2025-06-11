@@ -2,6 +2,7 @@
 title: 关于我们
 permalink: /about/
 ---
+<link href="../css/custom.css" rel="stylesheet">
 
 # 关于浅陌游戏俱乐部
 
