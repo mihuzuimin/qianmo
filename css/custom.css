@@ -2,7 +2,10 @@
 .col-md-4 { padding: 0 15px; }
 .card-body { padding: 1.5rem; }
 @media (max-width: 768px) {
-  .col-md-4 { flex: 0 0 100%; max-width: 100%; }
+  .game-card {
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
 }
 .feedback-button { margin: 2rem 0; }
 
