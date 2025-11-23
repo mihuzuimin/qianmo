@@ -18,13 +18,10 @@ body {
 .btn {
     color: #ffffff !important; /* 按钮颜色改为纯白色（提升优先级） */
     /* 可选：添加按钮背景色或其他样式增强效果 */
+}
 
 .navbar {
     color: #000; /* 上方导航栏字体改为黑色 */
 }
 
-.main-module {
-    filter: blur(5px); /* 主页模块50%模糊效果（blur值可根据实际调整） */
-    -webkit-filter: blur(5px); /* 兼容webkit内核浏览器 */
-}
-}
+/* 已移除模糊效果，提升用户体验 */
