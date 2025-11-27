@@ -1,4 +1,4 @@
-name = "qianmo-game-club"
+name = "qianmo"
 type = "static"
 account_id = "3b322f9a2ef5a9bf42265e6297e89839"  # 从Cloudflare控制台获取
 workers_dev = false
