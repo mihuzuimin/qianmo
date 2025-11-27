@@ -1,0 +1,10 @@
+name = "qianmo"  # 项目名称
+type = "static"  # 静态网站类型
+account_id = "3143944483@qq.com's Account"  # 从Cloudflare控制台获取
+workers_dev = false
+route = ""  # 可选：自定义域名路由
+zone_id = "你的域名zoneID"  # 可选：如果使用自定义域名
+
+[build]
+command = ""  # 构建命令，根据你的项目修改（如 npm run build）
+publish = "."  # 静态文件目录（根据实际构建输出目录修改）
